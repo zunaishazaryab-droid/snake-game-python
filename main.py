@@ -39,7 +39,7 @@ while is_game_on:
          segments[seg_num].goto(new_x, new_y)
     
      segments[0].forward(20)
-     segments[0].left(90)
+    #  segments[0].left(90)
        
         
 
