@@ -39,6 +39,8 @@ while is_game_on:
          score_board.update_Score()
          food.refresh()
     #  segments[0].left(90)
+    
+    
        
         
 
