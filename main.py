@@ -45,6 +45,15 @@ while is_game_on:
      if snake.head.xcor() > 282 or snake.head.xcor() < -282 or snake.head.ycor() > 282 or snake.head.ycor() < -282:
          is_game_on = False
          score_board.game_over()
+    
+    # Detect Collision with snake trail
+     for segment in snake.segments:
+         if segment == snake.head:
+             pass
+         elif snake.head.distance(segment) < 10:
+             is_game_on = False
+             score_board.game_over()
+             
         
        
         
