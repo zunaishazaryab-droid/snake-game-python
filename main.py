@@ -47,10 +47,11 @@ while is_game_on:
          score_board.game_over()
     
     # Detect Collision with snake trail
-     for segment in snake.segments:
-         if segment == snake.head:
-             pass
-         elif snake.head.distance(segment) < 10:
+     new_segement = snake.segments[1:]
+     for segment in new_segement:
+        #  if segment == snake.head:
+        #      pass
+         if snake.head.distance(segment) < 10:
              is_game_on = False
              score_board.game_over()
              
