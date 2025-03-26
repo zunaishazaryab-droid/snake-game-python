@@ -37,14 +37,14 @@ while is_game_on:
      if snake.head.distance(food) < 15:
          print("noam noam")
          snake.extends()
-         score_board.update_Score()
+         score_board.increase_score()
          food.refresh()
     #  segments[0].left(90)
     
     # Detect the Collision with Wall
      if snake.head.xcor() > 282 or snake.head.xcor() < -282 or snake.head.ycor() > 282 or snake.head.ycor() < -282:
-         is_game_on = False
-         score_board.game_over()
+         score_board.reset()
+         snake.reset()
     
     # Detect Collision with snake trail
      new_segement = snake.segments[1:]
@@ -52,8 +52,8 @@ while is_game_on:
         #  if segment == snake.head:
         #      pass
          if snake.head.distance(segment) < 10:
-             is_game_on = False
-             score_board.game_over()
+            score_board.reset()
+            snake.reset()
              
         
        
